@@ -11,19 +11,17 @@ import AboutSection from '@/components/landing_page_layout/sections/about-sectio
 import FeaturesSection from '@/components/landing_page_layout/sections/features-section';
 import ReviewsSection from '@/components/landing_page_layout/sections/reviews-section';
 
-const Page = () => {
+const LandingPage = () => {
   return (
-    <LandingPageAppShell>
-      <main className='pb-32 '>
-        <Container>
-          <HeroSection />
-          <AboutSection />
-          <FeaturesSection />
-          <ReviewsSection />
-        </Container>
-      </main>
-    </LandingPageAppShell>
+    <main className='pb-32 '>
+      <Container>
+        <HeroSection />
+        <AboutSection />
+        <FeaturesSection />
+        <ReviewsSection />
+      </Container>
+    </main>
   );
 };
 
-export default Page;
+export default LandingPage;

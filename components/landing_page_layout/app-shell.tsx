@@ -88,8 +88,22 @@ export function LandingPageAppShell({ children }: { children: React.ReactNode })
                 gap={10}
                 visibleFrom='sm'
               >
-                <OutlineButton>Daftar</OutlineButton>
-                <PrimaryButton>Masuk</PrimaryButton>
+                <Button
+                  component={Link}
+                  href='/register'
+                  variant='outline'
+                  radius='md'
+                >
+                  Daftar
+                </Button>
+                <Button
+                  component={Link}
+                  href='/login'
+                  variant='white'
+                  radius='md'
+                >
+                  Masuk
+                </Button>
               </Group>
             </Group>
           </Group>

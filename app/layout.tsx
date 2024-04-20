@@ -7,6 +7,7 @@ import '@mantine/core/styles.css';
 import { ColorSchemeScript, MantineProvider, createTheme, MantineColorsTuple } from '@mantine/core';
 
 // Components import
+import { LandingPageAppShell } from '@/components/landing_page_layout/app-shell';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -39,7 +40,9 @@ export default function RootLayout({
           theme={theme}
           forceColorScheme='dark'
         >
+         
           {children}
+        
         </MantineProvider>
       </body>
     </html>
