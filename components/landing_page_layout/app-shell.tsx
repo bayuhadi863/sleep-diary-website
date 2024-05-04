@@ -3,8 +3,9 @@
 // React import
 
 // Mantine import
-import { AppShell, Burger, Group, UnstyledButton, Button } from '@mantine/core';
+import { AppShell, Burger, Group, Button } from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
+// import { useDisclosure } from '@mantine/hooks/lib/index.mjs';
 
 // Next JS import
 import Image from 'next/image';
@@ -21,15 +22,15 @@ import classes from './app-shell.module.css';
 // Image Import
 import appLogo from '@/public/images/app-logo.png';
 
+// component import
+import Footer from './footer';
+
 export function LandingPageAppShell({ children }: { children: React.ReactNode }) {
   const [opened, { toggle }] = useDisclosure();
 
-  const currentDate = new Date();
-  const currentYear = currentDate.getFullYear();
-
   return (
     <AppShell
-      header={{ height: 100 }}
+      header={{ height: 90 }}
       navbar={{ width: 300, breakpoint: 'sm', collapsed: { desktop: true, mobile: !opened } }}
     >
       <AppShell.Header
@@ -55,8 +56,8 @@ export function LandingPageAppShell({ children }: { children: React.ReactNode })
                 <Image
                   src={appLogo}
                   alt='Logo of the application'
-                  width={50}
-                  height={50}
+                  width={40}
+                  height={40}
                   placeholder='blur'
                 />
                 <h1 className='text-xl font-bold'>SleepDiary</h1>
@@ -147,40 +148,10 @@ export function LandingPageAppShell({ children }: { children: React.ReactNode })
         </div>
       </AppShell.Navbar>
 
-      <AppShell.Main>{children}</AppShell.Main>
-      <AppShell.Footer
-        withBorder={false}
-        className={classes.footer}
-      >
-        <Container className='py-6'>
-          <div className='flex justify-between items-center mb-8'>
-            <div>
-              <h1 className='text-xl font-bold'>SleepDiary</h1>
-            </div>
-            <div className='flex gap-4'>
-              <Link
-                href='/'
-                className='text-sm border-b border-transparent hover:border-white transition-all'
-              >
-                Home
-              </Link>
-              <Link
-                href='/'
-                className='text-sm border-b border-transparent hover:border-white transition-all'
-              >
-                About
-              </Link>
-              <Link
-                href='/'
-                className='text-sm border-b border-transparent hover:border-white transition-all'
-              >
-                Features
-              </Link>
-            </div>
-          </div>
-          <p className='text-center text-xs text-gray-200'>Copyright © SleepDialy {currentYear}. Powered by Team B1. All Rights Reserved.</p>
-        </Container>
-      </AppShell.Footer>
+      <AppShell.Main>
+        {children}
+        <Footer />
+      </AppShell.Main>
     </AppShell>
   );
 }

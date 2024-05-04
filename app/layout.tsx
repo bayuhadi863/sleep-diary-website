@@ -4,6 +4,7 @@ import './globals.css';
 
 // Mantine import
 import '@mantine/core/styles.css';
+import '@mantine/carousel/styles.css';
 import { ColorSchemeScript, MantineProvider, createTheme, MantineColorsTuple } from '@mantine/core';
 
 // Components import
@@ -35,14 +36,12 @@ export default function RootLayout({
       <head>
         <ColorSchemeScript />
       </head>
-      <body className={`${inter.className} bg-black`}>
+      <body className={`${inter.className} bg-background`}>
         <MantineProvider
           theme={theme}
           forceColorScheme='dark'
         >
-         
           {children}
-        
         </MantineProvider>
       </body>
     </html>

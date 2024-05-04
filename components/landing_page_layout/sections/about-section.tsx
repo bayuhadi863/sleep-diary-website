@@ -1,45 +1,48 @@
+'use client';
+
 import React from 'react';
-import Image from 'next/image'
+// next js import
+import Image from 'next/image';
+// image import
+import aboutImage from '@/public/images/about-image.png';
+// component import
+import Container from '../container';
+
+import { motion } from 'framer-motion';
 
 const AboutSection = () => {
-  const imageWidth = 551;
-  const imageHeight = 534;
-  const circleSize = Math.max(imageWidth, imageHeight) - 80; // Adjust the value '40' as needed
-
   return (
-    <section className="max-container padding-container flex flex-col gap-20 py-10 pb-32 md:gap-28 lg:py-20 xl:flex-row">
-      <div className="flex items-center mb-10">
-        <div className="relative flex-none mr-10">
-          <div
-            className="absolute rounded-full z-0"
-            style={{
-              width: `${circleSize}px`,
-              height: `${circleSize}px`,
-              backgroundColor: '#161618',
-              top: `calc(50% - ${circleSize / 2}px)`,
-              left: `calc(50% - ${circleSize / 2}px)`,
-            }}
-          ></div>
-          <Image
-            src="/images/1.png"
-            width={imageWidth}
-            height={imageHeight}
-            alt="About"
-            className="max-w-none h-auto relative z-10"
-          />
+    <section className='py-10'>
+      <Container>
+        <div className='flex flex-col lg:flex-row gap-10 items-center mb-10'>
+          <motion.div
+            initial={{ y: 30, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+          >
+            <div className='flex justify-center'>
+              <Image
+                src={aboutImage}
+                alt='Feature image'
+                width={450}
+                height={450}
+                placeholder='blur'
+              />
+            </div>
+          </motion.div>
+          <motion.div
+            initial={{ y: 30, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+          >
+            <div className='max-w-[38rem]'>
+              <h2 className='text-3xl font-bold mb-6'>About</h2>
+              <p className='text-lg'>
+                Aplikasi SleepDiary adalah teman tidur Anda yang setia, membantu Anda memantau dan mencatat kualitas tidur Anda dari waktu ke waktu. Dengan fitur-fitur seperti grafik analisis pola tidur, reminder tidur, dan rekomendasi yang
+                disesuaikan, Anda dapat dengan mudah meningkatkan kualitas tidur Anda. Temukan pola tidur Anda dan faktor-faktor yang mempengaruhinya, dan bangun setiap hari merasa segar dan siap menghadapi hari dengan semangat!
+              </p>
+            </div>
+          </motion.div>
         </div>
-        <div className="flex-grow">
-          <h2 className="mb-8 text-[48px] font-bold">About</h2>
-          <p className="[font-family:'Poppins',Helvetica] font-medium text-white text-[24px] tracking-[0] leading-[normal]">
-            Aplikasi SleepDiary adalah teman tidur Anda yang setia, membantu Anda memantau dan <br/>
-            mencatat kualitas tidur Anda dari waktu ke waktu. Dengan fitur-fitur seperti 
-            grafik analisis pola tidur, <br/> 
-            reminder tidur, dan rekomendasi yang disesuaikan, Anda dapat dengan mudah meningkatkan kualitas tidur Anda. <br/> 
-            Temukan pola tidur Anda dan faktor-faktor yang mempengaruhinya, <br />
-            dan bangun setiap hari merasa segar dan siap menghadapi hari dengan semangat!
-          </p>
-        </div>
-      </div>
+      </Container>
     </section>
   );
 };

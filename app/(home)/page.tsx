@@ -13,13 +13,11 @@ import ReviewsSection from '@/components/landing_page_layout/sections/reviews-se
 
 const LandingPage = () => {
   return (
-    <main className='pb-32 '>
-      <Container>
-        <HeroSection />
-        <AboutSection />
-        <FeaturesSection />
-        <ReviewsSection />
-      </Container>
+    <main className='pb-10 overflow-hidden'>
+      <HeroSection />
+      <AboutSection />
+      <FeaturesSection />
+      <ReviewsSection />
     </main>
   );
 };
