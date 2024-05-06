@@ -37,7 +37,7 @@ export function LandingPageAppShell({ children }: { children: React.ReactNode })
         className={classes.header}
         withBorder={false}
       >
-        <div className='px-0 sm:px-4 lg:px-12 py-6 '>
+        <div className='px-0 sm:px-4 lg:px-12 py-6 text-white'>
           <Group
             h='100%'
             px='md'
