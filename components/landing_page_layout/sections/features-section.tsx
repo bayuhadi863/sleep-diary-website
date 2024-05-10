@@ -35,7 +35,7 @@ const features = [
 
 const FeaturesSection = () => {
   return (
-    <section className='min-h-screen py-10'>
+    <section id='features' className='py-10'>
       <Container>
         <motion.div
           initial={{ y: 30, opacity: 0 }}
@@ -52,7 +52,7 @@ const FeaturesSection = () => {
           initial={{ y: 30, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
         >
-          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10'>
+          <div className='grid grid-cols-1 lg:grid-cols-3 gap-10'>
             {features.map((feature, index) => (
               <FeatureCard
                 key={index}

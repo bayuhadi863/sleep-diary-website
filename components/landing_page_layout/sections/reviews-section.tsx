@@ -9,7 +9,10 @@ import { motion } from 'framer-motion';
 
 const ReviewsSection = () => {
   return (
-    <section className='py-10'>
+    <section
+      id='reviews'
+      className='py-10'
+    >
       <motion.div
         initial={{ y: 30, opacity: 0 }}
         whileInView={{ y: 0, opacity: 1 }}

@@ -12,9 +12,9 @@ import { motion } from 'framer-motion';
 
 const AboutSection = () => {
   return (
-    <section className='py-10'>
+    <section id='about' className='py-10'>
       <Container>
-        <div className='flex flex-col lg:flex-row gap-10 items-center mb-10'>
+        <div className='flex flex-col lg:flex-row gap-10 justify-center items-center mb-10'>
           <motion.div
             initial={{ y: 30, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}

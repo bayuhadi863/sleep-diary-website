@@ -65,26 +65,32 @@ export function LandingPageAppShell({ children }: { children: React.ReactNode })
 
               <div className='hidden sm:flex gap-4 lg:gap-10 sm:items-center'>
                 <Link
-                  href='/'
+                  href='/#hero'
                   className='text-sm border-b border-transparent hover:border-white transition-all'
                 >
                   Home
                 </Link>
                 <Link
-                  href='/'
+                  href='/#about'
                   className='text-sm border-b border-transparent hover:border-white transition-all'
                 >
                   About
                 </Link>
                 <Link
-                  href='/'
+                  href='/#features'
                   className='text-sm border-b border-transparent hover:border-white transition-all'
                 >
                   Features
                 </Link>
+                <Link
+                  href='/#reviews'
+                  className='text-sm border-b border-transparent hover:border-white transition-all'
+                >
+                  Reviews
+                </Link>
               </div>
 
-              <Group
+              {/* <Group
                 ml='xl'
                 gap={10}
                 visibleFrom='sm'
@@ -105,7 +111,7 @@ export function LandingPageAppShell({ children }: { children: React.ReactNode })
                 >
                   Masuk
                 </Button>
-              </Group>
+              </Group> */}
             </Group>
           </Group>
         </div>
@@ -119,7 +125,7 @@ export function LandingPageAppShell({ children }: { children: React.ReactNode })
         <div className='flex flex-col gap-6'>
           <div>
             <Link
-              href='/'
+              href='/#hero'
               className='pb-1 text-sm border-b border-transparent hover:border-white transition-all'
             >
               Home
@@ -127,7 +133,7 @@ export function LandingPageAppShell({ children }: { children: React.ReactNode })
           </div>
           <div>
             <Link
-              href='/'
+              href='/#about'
               className='pb-1 text-sm border-b border-transparent hover:border-white transition-all'
             >
               About
@@ -135,16 +141,24 @@ export function LandingPageAppShell({ children }: { children: React.ReactNode })
           </div>
           <div>
             <Link
-              href='/'
+              href='/#features'
               className='pb-1 text-sm border-b border-transparent hover:border-white transition-all'
             >
               Features
             </Link>
           </div>
-          <div className='grid grid-cols-2 gap-4 mt-4'>
+          <div>
+            <Link
+              href='/#reviews'
+              className='pb-1 text-sm border-b border-transparent hover:border-white transition-all'
+            >
+              Reviews
+            </Link>
+          </div>
+          {/* <div className='grid grid-cols-2 gap-4 mt-4'>
             <OutlineButton>Daftar</OutlineButton>
             <PrimaryButton>Masuk</PrimaryButton>
-          </div>
+          </div> */}
         </div>
       </AppShell.Navbar>
 
