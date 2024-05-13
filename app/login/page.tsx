@@ -29,13 +29,6 @@ const LoginPage = () => {
                 </div>
               </div>
               <form>
-                <div className="mt-12 text-xl font-[275] max-md:mt-10 max-md:max-w-full">
-                  Username
-                </div>
-                <input
-                  type="text"
-                  className="shrink-0 mt-2.5 rounded-xl border border-black border-solid bg-zinc-300 bg-opacity-0 h-[65px] max-md:max-w-full form-input-width"
-                />
                 <div className="mt-3 text-xl font-[275] max-md:max-w-full">
                   Email
                 </div>
@@ -60,7 +53,7 @@ const LoginPage = () => {
                     component="a"
                     className="px-16 py-7 text-xl font-medium text-white rounded-xl bg-slate-800 max-md:px-5"
                   >
-                    Sign up
+                    Sign in
                   </Button>
                 </Link>
               </div>
