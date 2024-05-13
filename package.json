@@ -21,7 +21,7 @@
     "dayjs": "^1.11.11",
     "embla-carousel-react": "^7.1.0",
     "framer-motion": "^11.1.7",
-    "next": "14.2.3",
+    "next": "^14.2.3",
     "react": "^18",
     "react-animate-on-scroll": "^2.1.9",
     "react-dom": "^18",

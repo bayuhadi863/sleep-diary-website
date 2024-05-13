@@ -10,6 +10,9 @@
   .mantine-Button-root {
     @apply bg-blue-500;
   }
+  .form-input-width {
+    width: 465px;
+  }
 }
 
 @layer utilities {

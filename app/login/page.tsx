@@ -1,6 +1,9 @@
+'use client';
+
 import React from 'react'
 import Link from 'next/link'
 import { Button } from '@mantine/core'
+import Image from 'next/image'
 
 const LoginPage = () => {
   return (
@@ -12,31 +15,42 @@ const LoginPage = () => {
               <div className="flex gap-5 self-center">
                 <img
                   loading="lazy"
-                  srcSet="..."
-                  className="shrink-0 w-24 aspect-[0.8]"
+                  srcSet="/images/app-logo.png"
+                  className="shrink-0 w-20 aspect-[1]"
                   alt="Logo"
                 />
                 <div className="flex flex-col my-auto">
                   <div className="text-2xl font-bold text-center">
                     SleepDiary
                   </div>
-                  <div className="mt-1.5 text-xs tracking-tighter">
+                  <div className="mt-1.5 text-l tracking-tighter">
                     Unlock Better Sleep, Unleash Better Days
                   </div>
                 </div>
               </div>
-              <div className="mt-12 text-2xl font-[275] max-md:mt-10 max-md:max-w-full">
-                Username
-              </div>
-              <div className="shrink-0 mt-2.5 rounded-xl border border-black border-solid bg-zinc-300 bg-opacity-0 h-[65px] max-md:max-w-full" />
-              <div className="mt-3 text-2xl font-[275] max-md:max-w-full">
-                Email
-              </div>
-              <div className="shrink-0 mt-2.5 rounded-xl border border-black border-solid bg-zinc-300 bg-opacity-0 h-[65px] max-md:max-w-full" />
-              <div className="mt-4 text-2xl font-[275] max-md:max-w-full">
-                Password
-              </div>
-              <div className="shrink-0 mt-2 rounded-xl border border-black border-solid bg-zinc-300 bg-opacity-0 h-[71px] max-md:max-w-full" />
+              <form>
+                <div className="mt-12 text-xl font-[275] max-md:mt-10 max-md:max-w-full">
+                  Username
+                </div>
+                <input
+                  type="text"
+                  className="shrink-0 mt-2.5 rounded-xl border border-black border-solid bg-zinc-300 bg-opacity-0 h-[65px] max-md:max-w-full form-input-width"
+                />
+                <div className="mt-3 text-xl font-[275] max-md:max-w-full">
+                  Email
+                </div>
+                <input
+                  type="email"
+                  className="shrink-0 mt-2.5 rounded-xl border border-black border-solid bg-zinc-300 bg-opacity-0 h-[65px] max-md:max-w-full form-input-width"
+                />
+                <div className="mt-4 text-xl font-[275] max-md:max-w-full">
+                  Password
+                </div>
+                <input
+                  type="password"
+                  className="shrink-0 mt-2 rounded-xl border border-black border-solid bg-zinc-300 bg-opacity-0 h-[65px] max-md:max-w-full form-input-width"
+                />
+              </form>
               <div className="self-end mt-4 text-base font-[275]">
                 Forgot Password?
               </div>
@@ -51,9 +65,9 @@ const LoginPage = () => {
                 </Link>
               </div>
               <div className="mt-8 text-base text-slate-800 max-md:max-w-full">
-                Already have an account?{" "}
-                <Link href="/login" passHref>
-                  <span className="font-bold cursor-pointer">Sign in</span>
+                Are you new?{" "}
+                <Link href="/register" passHref>
+                  <span className="font-bold cursor-pointer">Create an Account</span>
                 </Link>
               </div>
             </div>
@@ -66,7 +80,7 @@ const LoginPage = () => {
                 <div className="flex flex-col px-5 text-5xl font-extrabold max-md:max-w-full max-md:text-4xl">
                   <img
                     loading="lazy"
-                    srcSet="..."
+                    srcSet="/images/gambar-login.png"
                     className="w-full aspect-square max-md:max-w-full"
                     alt="Welcome Image"
                   />
