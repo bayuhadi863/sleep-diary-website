@@ -68,7 +68,10 @@ const Footer = () => {
     <Container className='py-10 bg-card'>
       <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-20 border-b border-gray-700 pb-4'>
         <div>
-          <div className='flex gap-2 items-center'>
+          <Link
+            href='/'
+            className='flex gap-2 items-center'
+          >
             <Image
               src={appLogo}
               alt='Logo of the application'
@@ -77,7 +80,7 @@ const Footer = () => {
               placeholder='blur'
             />
             <h3 className='text-xl font-bold'>SleepDiary</h3>
-          </div>
+          </Link>
           <div className='mt-4'>
             <p className='text-sm font-light text-gray-200'>SleepDiary adalah aplikasi pelacak tidur yang intuitif dan mudah digunakan. Teman setia dalam perjalanan menuju tidur yang lebih baik</p>
           </div>

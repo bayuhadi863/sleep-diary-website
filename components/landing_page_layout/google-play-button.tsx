@@ -1,9 +1,12 @@
 import React from 'react';
+// next js import
+import Link from 'next/link';
 
 const GooglePlayButton = () => {
   return (
-    <button
-      type='button'
+    <Link
+      href='https://play.google.com/store/apps/details?id=com.b1agile.sleep_diary_mobile&pcampaignid=web_share'
+      target='_blank'
       className='flex items-center justify-center px-5 text-white bg-black rounded-lg py-3 border border-white'
     >
       <div className='mr-3'>
@@ -33,7 +36,7 @@ const GooglePlayButton = () => {
         <div className='text-xs'>GET IT ON</div>
         <div className='-mt-1 font-sans text-xl font-semibold'>Google Play</div>
       </div>
-    </button>
+    </Link>
   );
 };
 

@@ -72,7 +72,10 @@ export function LandingPageAppShell({ children }: { children: React.ReactNode })
               justify='space-between'
               style={{ flex: 1 }}
             >
-              <div className='flex gap-2 items-center '>
+              <Link
+                href='/'
+                className='flex gap-2 items-center '
+              >
                 <Image
                   src={appLogo}
                   alt='Logo of the application'
@@ -81,7 +84,7 @@ export function LandingPageAppShell({ children }: { children: React.ReactNode })
                   placeholder='blur'
                 />
                 <h1 className='text-xl font-bold'>SleepDiary</h1>
-              </div>
+              </Link>
 
               <div className='hidden sm:flex gap-4 lg:gap-10 sm:items-center'>
                 {links.map((link, index) => (
