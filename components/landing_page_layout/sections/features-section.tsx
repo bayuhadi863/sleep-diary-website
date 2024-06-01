@@ -44,7 +44,7 @@ const FeaturesSection = () => {
           <div className='flex justify-center mb-10'>
             <div className='w-96 text-center'>
               <h3 className='text-3xl font-bold mb-2'>Features SleepDiary</h3>
-              <p className='text-lg'>Dengan SleepDaily , Anda dapat megetahui pola tidur Anda dengan efektif dan efisien</p>
+              <p className='text-lg'>Dengan SleepDiary , Anda dapat megetahui pola tidur Anda dengan efektif dan efisien</p>
             </div>
           </div>
         </motion.div>

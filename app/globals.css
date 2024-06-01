@@ -1,3 +1,4 @@
+/* styles/globals.css */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -19,4 +20,8 @@
   .shadow-card {
     box-shadow: rgba(0, 0, 0, 0.35) 0px 10px 15px;
   }
+}
+
+body {
+  @apply font-poppins;
 }

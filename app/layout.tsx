@@ -1,16 +1,13 @@
 import type { Metadata } from 'next';
-import { Inter } from 'next/font/google';
 import './globals.css';
 
 // Mantine import
 import '@mantine/core/styles.css';
 import '@mantine/carousel/styles.css';
-import { ColorSchemeScript, MantineProvider, createTheme, MantineColorsTuple } from '@mantine/core';
+import { ColorSchemeScript, MantineProvider, createTheme } from '@mantine/core';
 
 // Components import
 import { LandingPageAppShell } from '@/components/landing_page_layout/app-shell';
-
-const inter = Inter({ subsets: ['latin'] });
 
 const theme = createTheme({
   primaryColor: 'primary-white',
@@ -34,9 +31,10 @@ export default function RootLayout({
   return (
     <html lang='en'>
       <head>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" />
         <ColorSchemeScript />
       </head>
-      <body className={`${inter.className} bg-background`}>
+      <body className="bg-background font-poppins">
         <MantineProvider
           theme={theme}
           forceColorScheme='dark'

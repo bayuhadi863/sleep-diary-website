@@ -12,6 +12,9 @@ const config: Config = {
         background: '#191A19',
         card: '#161618',
       },
+      fontFamily: {
+        poppins: ['Poppins', 'sans-serif'],
+      },
     },
   },
   plugins: [],
