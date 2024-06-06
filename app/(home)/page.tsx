@@ -10,6 +10,7 @@ import HeroSection from '@/components/landing_page_layout/sections/hero-section'
 import AboutSection from '@/components/landing_page_layout/sections/about-section';
 import FeaturesSection from '@/components/landing_page_layout/sections/features-section';
 import ReviewsSection from '@/components/landing_page_layout/sections/reviews-section';
+import FAQSection from '@/components/landing_page_layout/sections/faq-section';
 
 const LandingPage = () => {
   return (
@@ -17,6 +18,7 @@ const LandingPage = () => {
       <HeroSection />
       <AboutSection />
       <FeaturesSection />
+      <FAQSection/>
       <ReviewsSection />
     </main>
   );
