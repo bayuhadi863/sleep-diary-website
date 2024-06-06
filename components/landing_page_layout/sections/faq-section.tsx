@@ -17,10 +17,7 @@ const charactersList = [
   {
     id: 'fiturutama',
     label: 'Apa fitur utama Aplikasi SleepDiary?',
-    content: `Fitur utama aplikasi SleepDiary adalah:
-  1. Grafik analisis pola tidur: Menampilkan pola tidur penguna dalam bentuk grafik untuk mempermuddah pemahaman dan penjelasan.
-  2. Reminder untuk waktu tidur: Memberi pengingat kepada penguna untuk tidur sesuai jadwal yang diimpkan.
-  3. Pemantauan kualitas tidur: Memungkinkan penguna untuk mencatat kualitas tidur mereka dari waktu ke waktu.`,
+    content: "Fitur utama aplikasi SleepDiary adalah:\n\n1. Grafik analisis pola tidur: Menampilkan pola tidur penguna dalam bentuk grafik untuk mempermuddah pemahaman dan penjelasan.\n\n2. Reminder untuk waktu tidur: Memberi pengingat kepada penguna untuk tidur sesuai jadwal yang diimpkan.\n\n3. Pemantauan kualitas tidur: Memungkinkan penguna untuk mencatat kualitas tidur mereka dari waktu ke waktu.",
   },
   {
     id: 'normalwaktu',
@@ -46,10 +43,10 @@ function AccordionLabel({ label }: AccordionLabelProps) {
 function FAQSection() {
   const items = charactersList.map((item) => (
     <Accordion.Item value={item.id} key={item.label}>
-      <Accordion.Control className="py-12 px-14 bg-gray-100 rounded-lg hover:bg-gray-200">
+      <Accordion.Control className="py-12 px-14 bg-gray-100 rounded-lg hover:bg-gray-700">
         <AccordionLabel {...item} />
       </Accordion.Control>
-      <Accordion.Panel className="p-6 bg-white rounded-lg shadow-md">
+      <Accordion.Panel className="p-6 rounded-lg shadow-md">
         <Text size="l">{item.content}</Text>
       </Accordion.Panel>
     </Accordion.Item>
