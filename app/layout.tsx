@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import './globals.css';
+import { Poppins } from 'next/font/google';
 
 // Mantine import
 import '@mantine/core/styles.css';
@@ -18,6 +19,12 @@ const theme = createTheme({
   white: '#ffffff',
 });
 
+const poppins = Poppins({
+  weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900'],
+  subsets: ['latin'],
+  display: 'swap',
+});
+
 export const metadata: Metadata = {
   title: 'SleepDiary',
   description: 'Track your sleep and improve your life',
@@ -31,10 +38,9 @@ export default function RootLayout({
   return (
     <html lang='en'>
       <head>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" />
         <ColorSchemeScript />
       </head>
-      <body className="bg-background font-poppins">
+      <body className={`bg-background ${poppins.className}`}>
         <MantineProvider
           theme={theme}
           forceColorScheme='dark'
